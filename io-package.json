@@ -1,0 +1,76 @@
+{
+	"common": {
+		"name": "aquarium",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "Aqauarium",
+		"titleLang": {
+			"en": "Aqauarium",
+			"de": "Aqauarium",
+			"ru": "Акауариум",
+			"pt": "Aqauarium",
+			"nl": "Aqauarium",
+			"fr": "Aqauarium",
+			"it": "Aqauarium",
+			"es": "Aqauarium",
+			"pl": "Aqauarium",
+			"zh-cn": "水草"
+		},
+		"desc": {
+			"en": "aquarium",
+			"de": "Aquarium",
+			"ru": "аквариум",
+			"pt": "aquário",
+			"nl": "aquarium",
+			"fr": "aquarium",
+			"it": "acquario",
+			"es": "acuario",
+			"pl": "akwarium",
+			"zh-cn": "水族馆"
+		},
+		"authors": [
+			"herrniffler <timo-wiese@gmx.net>"
+		],
+		"keywords": [
+			"aquarium"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "aquarium.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/derherrgraf/ioBroker.aquarium/master/admin/aquarium.png",
+		"readme": "https://github.com/derherrgraf/ioBroker.aquarium/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "misc-data",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=2.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
