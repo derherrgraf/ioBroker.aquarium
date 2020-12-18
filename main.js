@@ -39,11 +39,25 @@ class Aquarium extends utils.Adapter {
 		this.log.info("config option1: " + this.config.option1);
 		this.log.info("config option2: " + this.config.option2);
 
+		this.log.info("##### CREATE OBJECTS ##### ");
 		const name = "Nano Cube";
-
 		await this.setObjectNotExists(name, { type: "device", common: { name: name }, native: {} });
-		await this.setObjectNotExists(name+".temperature", { type: "state", common: { name: "temperature", role: "level", write: true, read: true, type: "number", unit: "°C", min: 5, max: 30}, native: {}});
+		await this.setObjectNotExists(name+".temperature", { type: "state", common: { name: "temperature", role: "value.temperature", write: true, read: true, type: "number", unit: "°C", min: 5, max: 30}, native: {}});
+		await this.setObjectNotExists(name+".KH", { type: "state", common: { name: "KH", role: "value", write: true, read: true, type: "number", unit: "°dKH"}, native: {}});
+		await this.setObjectNotExists(name+".GH", { type: "state", common: { name: "GH", role: "value", write: true, read: true, type: "number", unit: "°dGH"}, native: {}});
+		await this.setObjectNotExists(name+".Ca", { type: "state", common: { name: "Ca", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".Mg", { type: "state", common: { name: "Mg", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".pH", { type: "state", common: { name: "pH", role: "value", write: true, read: true, type: "number"}, native: {}});
+		await this.setObjectNotExists(name+".NH4", { type: "state", common: { name: "NH4", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".NO2", { type: "state", common: { name: "NO2", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".NO3", { type: "state", common: { name: "NO3", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".PO4", { type: "state", common: { name: "PO4", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".SiO2", { type: "state", common: { name: "SiO2", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".FE", { type: "state", common: { name: "FE", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".K", { type: "state", common: { name: "K", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".Cu", { type: "state", common: { name: "Cu", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
 		await this.setObjectNotExists(name+".O2", { type: "state", common: { name: "O2", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
+		await this.setObjectNotExists(name+".CO2", { type: "state", common: { name: "CO2", role: "value", write: true, read: true, type: "number", unit: "mg/l"}, native: {}});
 	}
 
 	/**
